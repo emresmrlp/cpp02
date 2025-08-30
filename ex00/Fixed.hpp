@@ -6,7 +6,7 @@
 /*   By: ysumeral <ysumeral@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 23:54:17 by ysumeral          #+#    #+#             */
-/*   Updated: 2025/08/30 09:46:46 by ysumeral         ###   ########.fr       */
+/*   Updated: 2025/08/30 12:04:04 by ysumeral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ public:
 	int		getRawBits(void) const;
 	void	setRawBits(int const raw);
 private:
-	int					fixedNumberValue;
+	int					numberValue;
 	static const int	fractionalBits = 8;
 };

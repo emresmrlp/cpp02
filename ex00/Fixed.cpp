@@ -6,22 +6,21 @@
 /*   By: ysumeral <ysumeral@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 23:54:04 by ysumeral          #+#    #+#             */
-/*   Updated: 2025/08/30 10:10:39 by ysumeral         ###   ########.fr       */
+/*   Updated: 2025/08/30 12:41:51 by ysumeral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed()
+Fixed::Fixed() : numberValue(0)
 {
-	this->fixedNumberValue = 0;
 	std::cout << "Default constructor called." << std::endl;
 }
 
 Fixed::Fixed(const Fixed &ref)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = ref;
+	this->numberValue = ref.getRawBits();
 }
 
 Fixed &Fixed::operator=(const Fixed &ref)
@@ -39,10 +38,10 @@ Fixed::~Fixed()
 int		Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
-	return (this->fixedNumberValue);
+	return (this->numberValue);
 }
 
 void	Fixed::setRawBits(int const raw)
 {
-	this->fixedNumberValue = raw;
+	this->numberValue = raw;
 }
